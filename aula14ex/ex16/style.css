@@ -59,6 +59,11 @@ form > input:hover{
     font-size: 1.2em;
 }
 
+div#res{
+    display: flex;
+    flex-flow: row wrap;
+}
+
 footer{
     color: white;
     text-align: center;
