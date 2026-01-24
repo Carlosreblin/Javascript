@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+body {
+    background-color: #427bff;
+    font: normal 1em system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+header > h1{
+    font-size: 2.6em;
+    font-weight: 900;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.548);
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.603);
+    display: flex;
+    flex-flow: column wrap;
+    gap: 20px;
+}
+
+input#num{
+    height: 30px;
+    width: 47%;
+    background-color: #646c7a1b;
+    border: none;
+    border-radius: 10px;
+}
+
+input.button{
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    background-color: #427bff;
+    color: white;
+    transition: 0.5s;
+}
+
+input.button:hover{
+    background-color: #004cff;
+    font-weight: 900;
+    scale: 1.05;
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
