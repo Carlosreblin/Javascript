@@ -1,42 +1,21 @@
-function verificar() {
+
+function carregar() {
+    var msg = document.getElementById('msg');
+    var img = document.getElementById('imagem');
     var data = new Date();
-    var ano = data.getFullYear();
-    var fano = document.getElementById('txtano');
-    var res = document.querySelector('div#res');
-    if (fano.value.length ==0 ||fano.value > ano) {
-        window.alert('[ERRO] Verifique o Ano de Nascimento');
-    } else {
-        var fsex = document.getElementsByName('radsex');
-        var idade = ano - Number(fano.value);
-        var genero = ``;
-        var img = document.createElement('img');
-        img.setAttribute('id','foto');
-        if (fsex[0].checked) {
-            genero= `Homem`
-            document.body.style.backgroundColor = '#00a6ffff'
-            if (idade >=0 && idade<10) {
-                img.setAttribute('src','imagens/bebe.jpg')
-            }else if (idade < 21) {
-                img.setAttribute('src','imagens/adolescente.jpg')
-            }else if (idade<50) {
-                img.setAttribute('src','imagens/adulto.jpg')
-            }else{
-                img.setAttribute('src','imagens/idoso.jpg')
-            }
-        }else if (fsex[1].checked) {
-            genero = `Mulher`
-            document.body.style.backgroundColor = '#ff72f8ff'
-            if (idade >=0 && idade<10) {
-                img.setAttribute('src','imagens/bebe-f.jpg')
-            }else if (idade < 21) {
-                img.setAttribute('src','imagens/adolescente-f.jpg')
-            }else if (idade<50) {
-                img.setAttribute('src','imagens/adulta.jpg')
-            }else{
-                img.setAttribute('src','imagens/idosa.jpg')
-            }
-        }
-        res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
-        res.appendChild(img);
+    var hora = data.getHours();
+    msg.innerHTML = `Agora são ${hora} horas`;
+    if (hora >=0 && hora < 12) {
+        msg.innerHTML += `<p>Bom Dia!</p>`;
+        img.src = 'imagens/pexels-leticia-alvares-1805702-31428993.jpg';
+        document.body.style.backgroundColor = '#ffb886';
+    }else if(hora < 18){
+        msg.innerHTML += `<p>Boa Tarde!</p>`;
+        img.src = 'imagens/pexels-brin-silver-2149146469-30562548.jpg'
+        document.body.style.backgroundColor = '#60a000'
+    }else{
+        msg.innerHTML += `<p>Boa Noite!</p>`;
+        img.src = 'imagens/pexels-rpnickson-2885320.jpg'
+        document.body.style.backgroundColor = '#002a60ff'
     }
 }

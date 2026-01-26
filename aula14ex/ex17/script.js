@@ -1,16 +1,28 @@
-function gerarTabuada() {
-    let num = document.getElementById('num');
-    let tab = document.getElementById('tab');
-    if (num.value.length == 0) {
-        alert(`[Erro] Digite um número`)
-    }else{
-        let n = Number(num.value);
-        tab.innerHTML = ``;
-        for(let c=1; c<=10; c++){
-            let item = document.createElement('option');
-            item.value = `tab${c}`;
-            item.text = `${n} x ${c} = ${n*c}`;
-            tab.appendChild(item);
+function contar() {
+    var ini = document.getElementById('inicio');
+    var fim = document.getElementById('fim');
+    var passo = document.getElementById('passo');
+    var res = document.getElementById('res');
+    if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+        alert('[ERRO] Faltam dados!')
+        res.innerHTML = `Impossível contar`
+    } else {
+        res.innerHTML = 'Contando:  ';
+        let i = Number(ini.value);
+        let f = Number(fim.value);
+        let p = Number(passo.value);
+
+        if (i > f) {
+            for(let c =i;c >= f;c-=p){
+            res.innerHTML +=`  ${c}  `
         }
+        } else {
+            for (let c = i; c <= f; c += p) {
+                res.innerHTML +=`  ${c}  `;
+            }
+        }
+
+
     }
+
 }

@@ -4,22 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Tabuada</title>
+    <title>Document</title>
 </head>
 <body>
     <header>
-        <h1>Tabuada</h1>
+        <h1>Vamos contar</h1>
     </header>
     <section>
         <div>
-            <label for="num">Número</label>
-            <input type="number" name="num" id="num">
-            <input type="button" value="Gerar Tabuada" id="button" onclick="gerarTabuada()">
+            <form>
+                <div class="campo">
+                    <label for="inicio">início:</label>
+                    <input type="number" name="Inicio" id="inicio">
+                </div>
+                <div class="campo">
+                    <label for="fim">Fim:</label>
+                    <input type="number" name="fim" id="fim">
+                </div>
+                <div class="campo">
+                    <label for="passo">Passo:</label>
+                    <input type="number" name="passo" id="passo">
+                </div>
+                <input type="button" value="Contar" onclick="contar()">
+            </form>
         </div>
-        <div>
-            <select name="tabuada" id="tab">
-                <option value="1"> Digite um Número Acima</option>
-            </select>
+        <div id="res">
+            
         </div>
     </section>
     <footer>
