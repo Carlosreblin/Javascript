@@ -1,10 +1,8 @@
-var agora = new Date();
-var hora = agora;
-console.log(`Agora são exatamente ${hora} horas.`);
-if (hora <=12) {
-    console.log(`Bom Dia`)
-} else if(hora <=18){
-    console.log(`Boa tarde`)
+var idade = 79;
+if (idade < 16) {
+    console.log(`Não vota`);
+}else if(idade <18 || idade > 67){
+    console.log(`Voto opcional`);
 }else{
-    console.log(`Boa Noite`)
+    console.log(`Voto obrigátório`);
 }
